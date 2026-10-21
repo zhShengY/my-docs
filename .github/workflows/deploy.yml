@@ -7,6 +7,9 @@ on:
       - 'docs/**'     # 仅 docs 目录变动
       - 'mkdocs.yml'  # 或 MkDocs 配置变动
 
+permissions:
+  contents: write   # 允许工作流向 gh-pages 分支推送构建产物
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
